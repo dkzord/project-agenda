@@ -1,0 +1,22 @@
+<%- include('includes/head'); %>
+
+<section class="container">
+  <h1>
+    <%= titulo %>
+    <br />
+    <br />
+    <%- titulo %>
+    <br />
+    <br />
+    <!-- <% if(typeof titulo !== 'undefined'){ %> <%= titulo %> <% } else { %>
+        Tituo não enviado! <% } %> -->
+  </h1>
+  <form method="post" action="/">
+    <input type="hidden" name="_csrf" value="<%= csrfToken  %>" />
+    <label>Cliente:</label>
+    <input type="text" name="cliente" />
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<%- include('includes/footer') %>
