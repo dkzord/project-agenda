@@ -11,14 +11,14 @@
       <%- include('includes/messages'); %>
 
       <form action="/contato/register" method="POST">
-        <input type="hidden" name="_csrf" value=<%= csrfToken %> />
+        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nome</label>
           <input
             type="text"
             class="form-control"
-            id="exampleInputEmail1"
             name="nome"
+            value="<%= contato.nome %>"
           />
         </div>
         <div class="mb-3">
@@ -26,8 +26,8 @@
           <input
             type="text"
             class="form-control"
-            id="exampleInputEmail1"
             name="sobrenome"
+            value="<%= contato.sobrenome %>"
           />
         </div>
         <div class="mb-3">
@@ -35,8 +35,8 @@
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
             name="email"
+            value="<%= contato.email %>"
           />
         </div>
         <div class="mb-3">
@@ -44,8 +44,8 @@
           <input
             type="tel"
             class="form-control"
-            id="exampleInputEmail1"
             name="telefone"
+            value="<%= contato.telefone %>"
           />
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
