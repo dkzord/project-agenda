@@ -21,6 +21,7 @@ export default class Login {
     const el = e.target;
     const emailInput = el.querySelector('input[name="email"]');
     const passwordInput = el.querySelector('input[name="password"]');
+
     let error = false;
 
     if (!validator.isEmail(emailInput.value)) {
